@@ -59,7 +59,7 @@ All measures are stored in a dedicated **Measures Table**:
 
 ```dax
 # Orders        = DISTINCTCOUNT(Fact[OrderID])
-# Order Details = COUNTROWS(Fact)
+# Order Details = DISTINCTCOUNT('Fact Table'[OrderDetailID])
 Total Sub-Total = SUM(Fact[Sub Total])
 Total Tax       = SUM(Fact[TaxAmt])
 Total Freight   = SUM(Fact[Freight])
